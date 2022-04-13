@@ -1,0 +1,19 @@
+use16
+
+org 100h
+
+mov ax,0xb800
+mov ds,ax
+
+mov word[ds:0xaf0], 0xe14c; L
+mov word[ds:0xaf2], 0xe169; i
+mov word[ds:0xaf4], 0xe17a; z
+mov word[ds:0xaf6], 0xe161; a
+
+mov word[ds:0xafa], 0x843c; <
+mov word[ds:0xafc], 0x8433; 3
+
+
+mov ax,0
+int 16h
+int 20h
